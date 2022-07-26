@@ -1,0 +1,26 @@
+echo 'Loading aliases...'
+
+alias ls='ls -F'
+alias lt='ls --human-readable --size -1 -S --classify'
+alias gh='history|grep'
+alias left='ls -t -1'
+alias count='find . -type f | wc -l']
+
+# Git Aliases
+alias startgit='cd `git rev-parse --show-toplevel` && git checkout master && git pull'
+alias cleangit='git branch --v | grep "\[gone\]" | awk "{print $1}" | xargs git branch -D'
+alias cg='cd `git rev-parse --show-toplevel`'
+
+# NPM aliases
+alias npmi='pnpm install'
+alias npms='pnpm start'
+alias npmt='pnpm test'
+
+alias untar='tar -zxvf '
+alias ..='cd ..'
+alias ...='cd ../../../'
+alias grep='grep --color=auto'
+alias now='date +"%T"'
+alias nowtime=now
+alias nowdate='date +"%d-%m-%Y"'
+alias sshon='eval "$(ssh-agent -s)" && ssh-add ~/.ssh/id_rsa'
