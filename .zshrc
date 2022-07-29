@@ -116,7 +116,7 @@ PWD=$(pwd)
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 . ~/.zsh/aliases
-[ -d ~/.zsh/aliases.local ] && . ~/.zsh/aliases.local
+[ ! -f ~/.zsh/aliases.local ] || . ~/.zsh/aliases.local
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
@@ -124,3 +124,5 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 # To customize prompt, run `p10k configure` or edit ~/.zsh/.p10k.zsh.
 [[ ! -f ~/.zsh/.p10k.zsh ]] || source ~/.zsh/.p10k.zsh
+
+[ ! -f ~/.zsh/.local.zshrc ] || source ~/.zsh/.local.zshrc

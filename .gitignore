@@ -65,3 +65,4 @@ zsdoc/data
 
 # Custom
 aliases.local
+.local.zshrc
