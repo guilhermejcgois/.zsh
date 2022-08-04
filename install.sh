@@ -1,4 +1,5 @@
-#!/bin/sh
+#!/bin/bash
+
 if ! [ -x "$(command -v zsh)" ]; then
   echo Missing zsh command, installing it...
   if [[ $OSTYPE == 'darwin'* ]]; then
@@ -25,3 +26,5 @@ else
 fi
 
 export ZSH_CONFIG_DIR="$(pwd)"
+
+cp .zshenv ..
